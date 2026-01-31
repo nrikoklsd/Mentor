@@ -721,10 +721,10 @@ h6 {
 --------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   right: 15px;
-  bottom: -15px;
+  bottom: 15px;
   z-index: 99999;
   background-color: var(--accent-color);
   width: 44px;
@@ -1934,3 +1934,8 @@ section,
 /* Щоб кнопки не перекривали одна одну */
 .scroll-top-wrapper:hover .st-phone { transition-delay: 0.2s; }
 .scroll-top-wrapper:hover .st-whatsapp { transition-delay: 0.1s; }
+
+.hero img {
+  transform: scale(1) !important; /* Скасовує будь-який scale від AOS */
+  transition: none !important;    /* Прибирає плавність зміни розміру */
+}
