@@ -1887,3 +1887,50 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* Контейнер для позиціонування */
+.scroll-top-wrapper {
+  position: fixed;
+  bottom: 66px;
+  right: 17px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Стиль маленьких кнопок */
+.st-child {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Кольори */
+.st-phone { background-color: #007bff; }
+.st-whatsapp { background-color: #25D366; }
+.st-instagram { background-color: #E1306C; }
+
+/* Логіка розкриття при наведенні на весь блок */
+.scroll-top-wrapper:hover .st-child {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Щоб кнопки не перекривали одна одну */
+.scroll-top-wrapper:hover .st-phone { transition-delay: 0.2s; }
+.scroll-top-wrapper:hover .st-whatsapp { transition-delay: 0.1s; }
