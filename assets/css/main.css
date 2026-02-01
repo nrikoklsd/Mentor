@@ -1941,3 +1941,25 @@ section,
   transition: none !important;
 }
 */
+@media (max-width: 1199px) {
+  .header .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Лого зліва, група елементів справа */
+  }
+
+  .logo {
+    margin-right: auto; /* Гарантує, що LGA притиснуте до лівого краю */
+  }
+
+  .header-right-group {
+    display: flex;
+    align-items: center;
+    order: 2; /* Ставить мови/кнопку перед іконкою меню */
+  }
+
+  .navmenu {
+    order: 3; /* Іконка бургер-меню буде крайньою справа */
+    margin-left: 10px;
+  }
+}
