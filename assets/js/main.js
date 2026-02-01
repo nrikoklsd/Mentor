@@ -75,7 +75,7 @@
 
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      window.scrollY > 1 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
   scrollTop.addEventListener('click', (e) => {
@@ -94,7 +94,7 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: 300,
       easing: 'ease-in-out',
       once: true,
       mirror: false
@@ -134,3 +134,46 @@
   window.addEventListener("load", initSwiper);
 
 })();
+
+
+
+const form = document.getElementById("contact-form");
+const button = document.getElementById("form-button");
+const loading = document.getElementById("form-loading");
+const error = document.getElementById("form-error");
+const sent = document.getElementById("form-sent");
+
+form.addEventListener("submit", async function(event) {
+  event.preventDefault(); // Зупиняємо стандартне перезавантаження
+
+  // Показуємо завантаження, ховаємо кнопку та помилки
+  loading.style.display = "block";
+  button.style.display = "none";
+  error.style.display = "none";
+  sent.style.display = "none";
+
+  const data = new FormData(event.target);
+
+  try {
+    const response = await fetch(event.target.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      // Успішна відправка
+      loading.style.display = "none";
+      sent.style.display = "block";
+      form.reset(); // Очищуємо поля форми
+    } else {
+      // Помилка сервера
+      throw new Error();
+    }
+  } catch (err) {
+    // Помилка мережі
+    loading.style.display = "none";
+    button.style.display = "inline-block";
+    error.style.display = "block";
+  }
+});
