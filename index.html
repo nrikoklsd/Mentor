@@ -41,7 +41,7 @@
     <nav id="navmenu" class="navmenu ms-auto">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="trainers.html">Tutors</a></li>
+        <li><a href="trainers.html" data-key="tutors">Tutors</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -58,6 +58,37 @@
     </div>
 
   </div>
+<!--<div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">-->
+
+<!--  <a href="index.html" class="logo d-flex align-items-center">-->
+<!--    <h1 class="sitename">LGA</h1>-->
+<!--  </a>-->
+
+<!--  <div class="d-flex align-items-center">-->
+
+<!--    <nav id="navmenu" class="navmenu">-->
+<!--      <ul>-->
+<!--        <li><a href="index.html" class="active">Home</a></li>-->
+<!--        <li><a href="trainers.html">Tutors</a></li>-->
+<!--        <li><a href="pricing.html">Pricing</a></li>-->
+<!--        <li><a href="contact.html">Contact</a></li>-->
+<!--      </ul>-->
+<!--      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>-->
+<!--    </nav>-->
+
+<!--    <div class="language-switch ms-3 d-flex align-items-center">-->
+<!--      <a href="#" onclick="changeLanguage('en')" id="lang-en" class="lang-link active">EN</a>-->
+<!--      <span class="mx-1 text-muted small">|</span>-->
+<!--      <a href="#" onclick="changeLanguage('ua')" id="lang-ua" class="lang-link">UA</a>-->
+<!--    </div>-->
+
+<!--    <a class="btn-getstarted ms-3" href="pricing.html" data-key="get_started">Get Started</a>-->
+
+<!--  </div>-->
+
+<!--</div>-->
+
+
 </header>
 
   <main class="main">
@@ -735,6 +766,55 @@
 <!--    <i class="bi bi-chat-dots" id="contactIcon"></i>-->
 <!--  </button>-->
 <!--</div>-->
+<script>
+  const translations = {
+    'en': {
+      'home': 'Home',
+      'tutors': 'Tutors',
+      'pricing': 'Pricing',
+      'contact': 'Contact',
+      'get_started': 'Get Started',
+      'hero_title': 'London GCSE Academy,\nby Marianna Petrivska',
+      'hero_subtitle': 'Tailored GCSE tuition'
+    },
+    'ua': {
+      'home': 'Головна',
+      'tutors': 'Викладачі',
+      'pricing': 'Ціни',
+      'contact': 'Контакти',
+      'get_started': 'Почати',
+      'hero_title': 'Академія London GCSE,\nвід Маріанни Петрівської',
+      'hero_subtitle': 'Індивідуальна підготовка до GCSE'
+    }
+  };
+
+  function changeLanguage(lang) {
+    // 1. Зберігаємо вибір у браузері
+    localStorage.setItem('selectedLang', lang);
+
+    // 2. Оновлюємо текст усіх елементів з атрибутом data-key
+    document.querySelectorAll('[data-key]').forEach(elem => {
+      const key = elem.getAttribute('data-key');
+      if (translations[lang][key]) {
+        // Використовуємо innerText або innerHTML залежно від потреби (тут innerText безпечніше)
+        elem.innerText = translations[lang][key];
+      }
+    });
+
+    // 3. Візуально виділяємо активну мову в перемикачі
+    document.querySelectorAll('.lang-link').forEach(link => link.classList.remove('active'));
+    document.getElementById(`lang-${lang}`).classList.add('active');
+
+    // 4. Змінюємо атрибут lang тегу html для SEO
+    document.documentElement.lang = lang;
+  }
+
+  // Виконується при завантаженні сторінки
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLang') || 'en';
+    changeLanguage(savedLang);
+  });
+</script>
 
 </body>
 
