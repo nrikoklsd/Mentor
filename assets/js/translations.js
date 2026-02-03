@@ -61,13 +61,7 @@ const translations = {
     'phoneus': 'Call Us',
     'letter_whatsup': 'Chat on WhatsApp',
     'insta': 'Instagram',
-    'letter_submit': 'Send Message',
-    '': 'aaa',
-    '': 'aaa',
-    '': 'aaa',
-    '': 'aaa',
-    '': 'aaa',
-    'aaaa': 'aaa',
+    'letter_submit': 'Send Message'
   },
   'ua': {
     'nav_home': 'Головна',
@@ -131,9 +125,7 @@ const translations = {
     'phoneus': 'Зателефонувати',
     'letter_whatsup': 'Написати у WhatsApp',
     'insta': 'Інстаграм',
-    'letter_submit': 'Надіслати лист',
-    'aaa': 'aaa',
-    'aaa': 'aaa'
+    'letter_submit': 'Надіслати лист'
   }
 };
 
