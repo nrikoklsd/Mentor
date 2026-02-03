@@ -1972,34 +1972,48 @@ section,
   }
 }
 
-/* Адаптивність для кнопок зв'язку */
+/* Адаптивність для мобільних пристроїв */
 @media (max-width: 768px) {
-  /* Збільшуємо основну кнопку, якщо вона стає замалою */
+
+  /* Основна кнопка (батьківський елемент) */
   .scroll-top {
-    width: 60px !important;
-    height: 60px !important;
+    width: 70px !important;
+    height: 70px !important;
     bottom: 20px !important;
     right: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: shake-periodic 10s infinite !important; /* Трясіння залишається */
   }
 
   .scroll-top i {
-    font-size: 30px !important;
+    font-size: 35px !important;
   }
 
-  /* Збільшуємо додаткові кнопки (WhatsApp, Phone тощо) для зручності натискання пальцем */
-  .st-child {
-    width: 50px !important;
-    height: 50px !important;
-    opacity: 1 !important; /* На мобільних краще тримати їх видимими або легшими для виклику */
-    visibility: visible !important;
-    transform: translateY(0) !important;
-    font-size: 24px !important;
-  }
-
-  /* Коригуємо позицію контейнера, щоб він не вилазив за екран */
+  /* Контейнер для додаткових кнопок */
   .scroll-top-wrapper {
     bottom: 100px !important;
-    right: 25px !important;
-    gap: 15px !important;
+    right: 30px !important;
+    gap: 12px !important;
   }
+
+  /* Повертаємо кнопкам стан "заховано" за замовчуванням */
+  .st-child {
+    width: 55px !important;
+    height: 55px !important;
+    font-size: 26px !important;
+    opacity: 0 !important;           /* Сховані */
+    visibility: hidden !important;   /* Неактивні */
+    transform: translateY(20px) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  /* Розкриваємо ТІЛЬКИ при наведенні або тривалому натисканні на весь блок */
+  .scroll-top-wrapper:hover .st-child {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+}
 }
