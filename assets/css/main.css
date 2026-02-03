@@ -1971,3 +1971,35 @@ section,
     margin-left: 10px;
   }
 }
+
+/* Адаптивність для кнопок зв'язку */
+@media (max-width: 768px) {
+  /* Збільшуємо основну кнопку, якщо вона стає замалою */
+  .scroll-top {
+    width: 60px !important;
+    height: 60px !important;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+
+  .scroll-top i {
+    font-size: 30px !important;
+  }
+
+  /* Збільшуємо додаткові кнопки (WhatsApp, Phone тощо) для зручності натискання пальцем */
+  .st-child {
+    width: 50px !important;
+    height: 50px !important;
+    opacity: 1 !important; /* На мобільних краще тримати їх видимими або легшими для виклику */
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    font-size: 24px !important;
+  }
+
+  /* Коригуємо позицію контейнера, щоб він не вилазив за екран */
+  .scroll-top-wrapper {
+    bottom: 100px !important;
+    right: 25px !important;
+    gap: 15px !important;
+  }
+}
