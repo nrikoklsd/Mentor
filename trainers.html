@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Trainers - London GCSE Academy</title>
+  <title>Tutors - London GCSE Academy</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -34,43 +34,28 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+      <a href="index.html" class="logo d-flex align-items-center">
         <h1 class="sitename">LGA</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu ms-auto">
         <ul>
-          <li><a href="index.html">Home<br></a></li>
-<!--          <li><a href="about.html">About</a></li>-->
-<!--          <li><a href="courses.html">Courses</a></li>-->
-          <li><a href="trainers.html" class="active">Tutors</a></li>
-<!--          <li><a href="events.html">Events</a></li>-->
-          <li><a href="pricing.html">Pricing</a></li>
-<!--          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>-->
-<!--            <ul>-->
-<!--              <li><a href="#">Dropdown 1</a></li>-->
-<!--              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">Deep Dropdown 1</a></li>-->
-<!--                  <li><a href="#">Deep Dropdown 2</a></li>-->
-<!--                  <li><a href="#">Deep Dropdown 3</a></li>-->
-<!--                  <li><a href="#">Deep Dropdown 4</a></li>-->
-<!--                  <li><a href="#">Deep Dropdown 5</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--              <li><a href="#">Dropdown 2</a></li>-->
-<!--              <li><a href="#">Dropdown 3</a></li>-->
-<!--              <li><a href="#">Dropdown 4</a></li>-->
-<!--            </ul>-->
-<!--          </li>-->
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" class="active" data-key="nav_home">Home</a></li>
+          <li><a href="trainers.html" data-key="nav_tutors">Tutors</a></li>
+          <li><a href="pricing.html" data-key="nav_pricing">Pricing</a></li>
+          <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="pricing.html">Get Started</a>
+      <div class="header-right-group d-flex align-items-center">
+        <div class="language-switch mx-3">
+          <a href="#" onclick="changeLanguage('en')" id="lang-en" class="lang-link active">EN</a>
+          <span class="mx-1">|</span>
+          <a href="#" onclick="changeLanguage('ua')" id="lang-ua" class="lang-link">UA</a>
+        </div>
+        <a class="btn-getstarted" href="pricing.html" data-key="btn_get_started">Get Started</a>
+      </div>
 
     </div>
   </header>
@@ -92,8 +77,8 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Trainers</li>
+            <li><a href="index.html" data-key="nav_home">Home</a></li>
+            <li class="current" data-key="nav_tutors">Tutors</li>
           </ol>
         </div>
       </nav>
@@ -117,9 +102,9 @@
               </div>
             </div>
             <div class="member-info text-center">
-              <h4>Marianna Petrivska</h4>
-              <span>Founder and Maths teacher</span>
-              <p>Marianna has 4 years of teaching experience. A top 2% graduate of the Lviv Physics and Mathematics Lyceum. Holds a Bachelor’s degree in Computer Science from Lviv Polytechnic National University, with international study experience at Kingston University in London.</p>
+              <h4 data-key="tutor_1_name">Marianna Petrivska</h4>
+              <span data-key="tutor_1_role">Founder and Maths teacher</span>
+              <p data-key="tutor_1_desc">Marianna has 4 years of teaching experience. A top 2% graduate of the Lviv Physics and Mathematics Lyceum. Holds a Bachelor’s degree in Computer Science from Lviv Polytechnic National University, with international study experience at Kingston University in London.</p>
             </div>
           </div><!-- End Team Member -->
 
@@ -134,9 +119,9 @@
               </div>
             </div>
             <div class="member-info text-center">
-              <h4>Tetiana Syniavska</h4>
-              <span>English teacher</span>
-              <p>Tetiana has 4 years of experience, specialising in GCSE preparation, works with students who want clear explanations, confident speaking and strong exam technique. Master’s degree in English language, Uman State Pedagogical University.</p>
+              <h4 data-key="tutor_2_name">Tetiana Syniavska</h4>
+              <span data-key="tutor_2_role">English teacher</span>
+              <p data-key="tutor_2_desc">Tetiana has 4 years of experience, specialising in GCSE preparation, works with students who want clear explanations, confident speaking and strong exam technique. Master’s degree in English language, Uman State Pedagogical University.</p>
             </div>
           </div><!-- End Team Member -->
 
@@ -154,7 +139,7 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">London GCSE Academy</span>
+            <span class="sitename" data-key="footer_sitename">London GCSE Academy</span>
           </a>
           <div class="footer-contact pt-3">
 <!--            <p>A108 Adam Street</p>-->
@@ -171,14 +156,12 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4 data-key="footer_useful_links">Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
-<!--            <li><a href="#">Terms of service</a></li>-->
-<!--            <li><a href="#">Privacy policy</a></li>-->
+            <li><a href="index.html" data-key="nav_home">Home</a></li>
+            <li><a href="#" data-key="footer_about_us">About us</a></li>
+            <li><a href="pricing.html" data-key="nav_pricing">Pricing</a></li>
+            <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
           </ul>
         </div>
 
@@ -194,13 +177,13 @@
 <!--        </div>-->
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <h4 data-key="footer_newsletter_title">Our Newsletter</h4>
+          <p data-key="footer_newsletter_text">Subscribe to our newsletter and receive the latest news about our products and services!</p>
           <form action="https://formspree.io/f/xkobdpnj" method="POST">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-<!--            <div class="loading">Loading</div>-->
-<!--            <div class="error-message"></div>-->
-<!--            <div class="sent-message">Your subscription request has been sent. Thank you!</div>-->
+            <div class="newsletter-form">
+              <input type="email" name="email">
+              <input type="submit" data-key="btn_subscribe" value="Subscribe">
+            </div>
           </form>
         </div>
 
@@ -208,14 +191,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span></span> <strong class="px-1 sitename">LGA</strong> <span>All Rights Reserved</span></p>
-<!--      <div class="credits">-->
-<!--        &lt;!&ndash; All the links in the footer should remain intact. &ndash;&gt;-->
-<!--        &lt;!&ndash; You can delete the links only if you've purchased the pro version. &ndash;&gt;-->
-<!--        &lt;!&ndash; Licensing information: https://bootstrapmade.com/license/ &ndash;&gt;-->
-<!--        &lt;!&ndash; Purchase the pro version with working PHP/AJAX contact form: [buy-url] &ndash;&gt;-->
-<!--        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon-->
-<!--      </div>-->
+      <p>© <span></span> <strong class="px-1 sitename">LGA</strong> <span data-key="footer_rights">All Rights Reserved</span></p>
     </div>
 
   </footer>
@@ -229,7 +205,7 @@
     <a href="https://www.instagram.com/marianna_petrivska/" target="_blank" class="st-child st-instagram"><i class="bi bi-instagram"></i></a>
 
     <a href="javascript:void(0)" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-      <i class="bi bi-chat-dots"></i>
+      <i class="bi bi-whatsapp"></i>
     </a>
   </div>
 
@@ -246,7 +222,31 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
 
+  <script>
+    function changeLanguage(lang) {
+      localStorage.setItem('selectedLang', lang);
+      document.querySelectorAll('[data-key]').forEach(elem => {
+        const key = elem.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) {
+          if (elem.tagName === 'INPUT' && (elem.type === 'submit' || elem.type === 'button')) {
+            elem.value = translations[lang][key];
+          } else {
+            elem.innerText = translations[lang][key];
+          }
+        }
+      });
+      document.querySelectorAll('.lang-link').forEach(link => link.classList.remove('active'));
+      const activeBtn = document.getElementById(`lang-${lang}`);
+      if (activeBtn) activeBtn.classList.add('active');
+      document.documentElement.lang = lang;
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('selectedLang') || 'en';
+      changeLanguage(savedLang);
+    });
+  </script>
 </body>
 
 </html>
