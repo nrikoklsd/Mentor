@@ -34,43 +34,28 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+      <a href="index.html" class="logo d-flex align-items-center">
         <h1 class="sitename">LGA</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu ms-auto">
         <ul>
-          <li><a href="index.html">Home<br></a></li>
-<!--          <li><a href="about.html">About</a></li>-->
-<!--          <li><a href="courses.html">Courses</a></li>-->
-          <li><a href="trainers.html">Tutors</a></li>
-<!--          <li><a href="events.html">Events</a></li>-->
-          <li><a href="pricing.html" class="active">Pricing</a></li>
-<!--          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>-->
-<!--            <ul>-->
-<!--              <li><a href="#">Dropdown 1</a></li>-->
-<!--              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>-->
-<!--                <ul>-->
-<!--                  <li><a href="#">Deep Dropdown 1</a></li>-->
-<!--                  <li><a href="#">Deep Dropdown 2</a></li>-->
-<!--                  <li><a href="#">Deep Dropdown 3</a></li>-->
-<!--                  <li><a href="#">Deep Dropdown 4</a></li>-->
-<!--                  <li><a href="#">Deep Dropdown 5</a></li>-->
-<!--                </ul>-->
-<!--              </li>-->
-<!--              <li><a href="#">Dropdown 2</a></li>-->
-<!--              <li><a href="#">Dropdown 3</a></li>-->
-<!--              <li><a href="#">Dropdown 4</a></li>-->
-<!--            </ul>-->
-<!--          </li>-->
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" class="active" data-key="nav_home">Home</a></li>
+          <li><a href="trainers.html" data-key="nav_tutors">Tutors</a></li>
+          <li><a href="pricing.html" data-key="nav_pricing">Pricing</a></li>
+          <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="contact.html">Get Started</a>
+      <div class="header-right-group d-flex align-items-center">
+        <div class="language-switch mx-3">
+          <a href="#" onclick="changeLanguage('en')" id="lang-en" class="lang-link active">EN</a>
+          <span class="mx-1">|</span>
+          <a href="#" onclick="changeLanguage('ua')" id="lang-ua" class="lang-link">UA</a>
+        </div>
+        <a class="btn-getstarted" href="pricing.html" data-key="btn_get_started">Get Started</a>
+      </div>
 
     </div>
   </header>
@@ -108,24 +93,24 @@
 
           <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="pricing-item">
-              <h3>Single Lesson</h3>
-              <h4><sup>£</sup>40<span> / lesson</span></h4>
+              <h3 data-key="one_lesson">Single Lesson</h3>
+              <h4><sup>£</sup>40<span data-key="lesson"> / lesson</span></h4>
               <ul>
-                <li>One-time individual lesson. Ideal for consultations, specific questions, or trying out the learning format</li>
+                <li data-key="one_lesson_d">One-time individual lesson. Ideal for consultations, specific questions, or trying out the learning format</li>
 <!--                <li class="na"></li>-->
               </ul>
               <div class="btn-wrap">
-                <a href="https://revolut.me/mariannahello?currency=GBP&amount=4000" class="btn-buy">Buy Now</a>
+                <a href="https://revolut.me/mariannahello?currency=GBP&amount=4000" class="btn-buy" data-key="buy_now">Buy Now</a>
               </div>
             </div>
           </div><!-- End Pricing Item -->
 
           <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="pricing-item">
-              <h3>5-Lesson Package</h3>
-              <h4><sup>£</sup>35<span> / lesson</span></h4>
+              <h3 data-key="five_lesson">5-Lesson Package</h3>
+              <h4><sup>£</sup>35<span data-key="lesson"> / lesson</span></h4>
               <ul>
-                <li>A flexible package of 5 lessons. Great for reinforcing knowledge, working toward a specific goal, or getting started.</li>
+                <li data-key="five_lesson_d">A flexible package of 5 lessons. Great for reinforcing knowledge, working toward a specific goal, or getting started.</li>
 <!--                <li>A flexible package of 5 lessons.</li>-->
 <!--                <li>Great for reinforcing knowledge,</li>-->
 <!--                <li>working toward a specific goal,</li>-->
@@ -133,7 +118,7 @@
 <!--                <li class="na">Massa ultricies mi</li>-->
               </ul>
               <div class="btn-wrap">
-                <a href="https://revolut.me/mariannahello?currency=GBP&amount=17500" class="btn-buy">Buy Now</a>
+                <a href="https://revolut.me/mariannahello?currency=GBP&amount=17500" class="btn-buy" data-key="buy_now">Buy Now</a>
               </div>
             </div>
           </div><!-- End Pricing Item -->
@@ -141,13 +126,13 @@
           <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="pricing-item featured">
 <!--              <span class="advanced">Advanced</span>-->
-              <h3>10-Lesson Package</h3>
-              <h4><sup>$</sup>35<span> / lesson</span></h4>
+              <h3 data-key="ten_lesson">10-Lesson Package</h3>
+              <h4><sup>£</sup>35<span data-key="lesson"> / lesson</span></h4>
               <ul>
-                <li>A complete package of 10 individual lessons. Perfect for in-depth learning, structured progress, and long-term results.</li>
+                <li data-key="ten_lesson_d">A complete package of 10 individual lessons. Perfect for in-depth learning, structured progress, and long-term results.</li>
               </ul>
               <div class="btn-wrap">
-                <a href="https://revolut.me/mariannahello?currency=GBP&amount=35000" class="btn-buy">Buy Now</a>
+                <a href="https://revolut.me/mariannahello?currency=GBP&amount=35000" class="btn-buy" data-key="buy_now">Buy Now</a>
               </div>
             </div>
           </div><!-- End Pricing Item -->
@@ -166,7 +151,7 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">London GCSE Academy</span>
+            <span class="sitename" data-key="footer_sitename">London GCSE Academy</span>
           </a>
           <div class="footer-contact pt-3">
 <!--            <p>A108 Adam Street</p>-->
@@ -183,25 +168,23 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4 data-key="footer_useful_links">Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
-<!--            <li><a href="#">Terms of service</a></li>-->
-<!--            <li><a href="#">Privacy policy</a></li>-->
+            <li><a href="index.html" data-key="nav_home">Home</a></li>
+            <li><a href="#" data-key="footer_about_us">About us</a></li>
+            <li><a href="pricing.html" data-key="nav_pricing">Pricing</a></li>
+            <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <h4 data-key="footer_newsletter_title">Our Newsletter</h4>
+          <p data-key="footer_newsletter_text">Subscribe to our newsletter and receive the latest news about our products and services!</p>
           <form action="https://formspree.io/f/xkobdpnj" method="POST">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-<!--            <div class="loading">Loading</div>-->
-<!--            <div class="error-message"></div>-->
-<!--            <div class="sent-message">Your subscription request has been sent. Thank you!</div>-->
+            <div class="newsletter-form">
+              <input type="email" name="email">
+              <input type="submit" data-key="btn_subscribe" value="Subscribe">
+            </div>
           </form>
         </div>
 
@@ -209,14 +192,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span></span> <strong class="px-1 sitename">LGA</strong> <span>All Rights Reserved</span></p>
-<!--      <div class="credits">-->
-<!--        &lt;!&ndash; All the links in the footer should remain intact. &ndash;&gt;-->
-<!--        &lt;!&ndash; You can delete the links only if you've purchased the pro version. &ndash;&gt;-->
-<!--        &lt;!&ndash; Licensing information: https://bootstrapmade.com/license/ &ndash;&gt;-->
-<!--        &lt;!&ndash; Purchase the pro version with working PHP/AJAX contact form: [buy-url] &ndash;&gt;-->
-<!--        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon-->
-<!--      </div>-->
+      <p>© <span></span> <strong class="px-1 sitename">LGA</strong> <span data-key="footer_rights">All Rights Reserved</span></p>
     </div>
 
   </footer>
@@ -247,7 +223,31 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
 
+  <script>
+    function changeLanguage(lang) {
+      localStorage.setItem('selectedLang', lang);
+      document.querySelectorAll('[data-key]').forEach(elem => {
+        const key = elem.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) {
+          if (elem.tagName === 'INPUT' && (elem.type === 'submit' || elem.type === 'button')) {
+            elem.value = translations[lang][key];
+          } else {
+            elem.innerText = translations[lang][key];
+          }
+        }
+      });
+      document.querySelectorAll('.lang-link').forEach(link => link.classList.remove('active'));
+      const activeBtn = document.getElementById(`lang-${lang}`);
+      if (activeBtn) activeBtn.classList.add('active');
+      document.documentElement.lang = lang;
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('selectedLang') || 'en';
+      changeLanguage(savedLang);
+    });
+  </script>
 </body>
 
 </html>

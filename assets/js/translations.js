@@ -47,7 +47,20 @@ const translations = {
     'footer_newsletter_title': 'Our Newsletter',
     'footer_newsletter_text': 'Subscribe to our newsletter and receive the latest news about our products and services!',
     'btn_subscribe': 'Subscribe',
-    'footer_rights': 'All Rights Reserved'
+    'footer_rights': 'All Rights Reserved',
+    'one_lesson': 'Single Lesson',
+    'lesson': '/ lesson',
+    'one_lesson_d': 'One-time individual lesson. Ideal for consultations, specific questions, or trying out the learning format',
+    'five_lesson': '5-Lesson Package',
+    'five_lesson_d': 'A flexible package of 5 lessons. Great for reinforcing knowledge, working toward a specific goal, or getting started.',
+    'ten_lesson': '10-Lesson Package',
+    'ten_lesson_d': 'A complete package of 10 individual lessons. Perfect for in-depth learning, structured progress, and long-term results.',
+    'buy_now': 'Buy Now',
+    'aaaa': 'aaa',
+    'aaaa': 'aaa',
+    'aaaa': 'aaa',
+    'aaaa': 'aaa',
+    'aaaa': 'aaa',
   },
   'ua': {
     'nav_home': 'Головна',
@@ -97,6 +110,22 @@ const translations = {
     'footer_newsletter_title': 'Наша розсилка',
     'footer_newsletter_text': 'Підпишіться, щоб отримувати новини про наші послуги!',
     'btn_subscribe': 'Підписатися',
-    'footer_rights': 'Усі права захищені'
+    'footer_rights': 'Усі права захищені',
+    'one_lesson': 'Індивідуальне заняття',
+    'one_lesson_d': 'Одноразовий індивідуальний урок. Ідеально підходить для вирішення конкретних завдань або ознайомлення з форматом навчання.',
+    'five_lesson': 'Пакет 5 занять',
+    'five_lesson_d': 'Пакет із 5 занять для впевненого старту, закріплення знань і роботи над конкретною метою.',
+    'ten_lesson': 'Пакет 10 занять',
+    'ten_lesson_d': 'Повний пакет із 10 індивідуальних занять. Ідеально підходить для поглибленого навчання, структурованого прогресу та довгострокових результатів.',
+    'buy_now': 'Оплата',
+    'lesson': '/ урок',
+    'aaa': 'aaa',
+    'aaa': 'aaa',
+    'aaa': 'aaa'
   }
 };
+
+
+
+
+
