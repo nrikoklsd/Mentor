@@ -56,10 +56,17 @@ const translations = {
     'ten_lesson': '10-Lesson Package',
     'ten_lesson_d': 'A complete package of 10 individual lessons. Perfect for in-depth learning, structured progress, and long-term results.',
     'buy_now': 'Buy Now',
-    'aaaa': 'aaa',
-    'aaaa': 'aaa',
-    'aaaa': 'aaa',
-    'aaaa': 'aaa',
+    'adress': 'Address',
+    'london': 'London',
+    'phoneus': 'Call Us',
+    'letter_whatsup': 'Chat on WhatsApp',
+    'insta': 'Instagram',
+    'letter_submit': 'Send Message',
+    '': 'aaa',
+    '': 'aaa',
+    '': 'aaa',
+    '': 'aaa',
+    '': 'aaa',
     'aaaa': 'aaa',
   },
   'ua': {
@@ -119,11 +126,29 @@ const translations = {
     'ten_lesson_d': 'Повний пакет із 10 індивідуальних занять. Ідеально підходить для поглибленого навчання, структурованого прогресу та довгострокових результатів.',
     'buy_now': 'Оплата',
     'lesson': '/ урок',
-    'aaa': 'aaa',
+    'adress': 'Адреса',
+    'london': 'Лондон',
+    'phoneus': 'Зателефонувати',
+    'letter_whatsup': 'Написати у WhatsApp',
+    'insta': 'Інстаграм',
+    'letter_submit': 'Надіслати лист',
     'aaa': 'aaa',
     'aaa': 'aaa'
   }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
