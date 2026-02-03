@@ -723,18 +723,26 @@ h6 {
   position: fixed;
   visibility: visible;
   opacity: 1;
-  right: 15px;
-  bottom: 15px;
+  right: 30px;
+  bottom: 60px;
   z-index: 99999;
   background-color: var(--accent-color);
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
+  width: 88px;
+  height: 88px;
+  border-radius: 100px;
   transition: all 0.4s;
+
+  animation: shake 1s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
 }
 
 .scroll-top i {
-  font-size: 24px;
+  font-size: 44px;
   color: var(--contrast-color);
   line-height: 0;
 }
@@ -747,7 +755,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
+  bottom: 40px;
 }
 
 /*--------------------------------------------------------------
@@ -1891,8 +1899,8 @@ section,
 /* Контейнер для позиціонування */
 .scroll-top-wrapper {
   position: fixed;
-  bottom: 66px;
-  right: 17px;
+  bottom: 160px;
+  right: 53px;
   z-index: 999;
   display: flex;
   flex-direction: column;
